@@ -1,0 +1,22 @@
+[
+    {
+      "City": "Philadelphia",
+      "Avg_Discount": 0.2
+    },
+    {
+      "City": "Yuma",
+      "Avg_Discount": 0.2
+    },
+    {
+      "City": "York",
+      "Avg_Discount": 0.2
+    },
+    {
+      "City": "Wilson",
+      "Avg_Discount": 0.2
+    },
+    {
+      "City": "Whittier",
+      "Avg_Discount": 0.2
+    }
+  ]

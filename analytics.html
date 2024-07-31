@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analitycs</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <!-- =============== Navigation side bar================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#index.html">
+                        <span class="icon">
+                            <img src="assets/imgs/logosuperstore.png" width="40px" height="40px" alt="">
+                        </span>
+                        <span class="title">SUPERSTORE</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="analytics.html">
+                        <span class="icon">
+                            <ion-icon name="pulse"></ion-icon>
+                        </span>
+                        <span class="title">Analytics</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="team.html">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Team</span>
+                    </a>
+                </li>
+
+        </div>
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+                <div class="tittleAnalytics">
+                    <h1>ANALYTICS SUPERSTORE</h1>
+                    <p>KM FEB24 - Section Medan - Team 14</p>
+                </div>
+                <div class="userAnalytics">
+                    <img src="assets/imgs/revou.png" alt="">
+                </div>
+            </div>
+            <div class="container-select" data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000">
+                <p class="tb1">Top 4 Product by Quantity</p>
+                <div class="select">
+                    <form class="select-form">
+                        <select id="filter_by_city">
+                            <option value="all">City :</option>
+                            <option value="Philadelphia">Philadelphia</option>
+                            <option value="Yuma">Yuma</option>
+                            <option value="York">York</option>
+                            <option value="Wilson">Wilson</option>
+                            <option value="Whittier">Whittier</option>
+                        </select>
+
+                        <!--<select>
+                            <option value="State">State :</option>
+                            <option value="Virginia">Virginia</option>
+                            <option value="Utah">Utah</option>
+                            <option value="Texas">Texas</option>
+                            <option value="New York">New York</option>
+                            <option value="Michigan">Michigan</option>
+                        </select>-->
+
+                        <select id="filter_by_region">
+                            <option value="all">Region :</option>
+                            <option value="West">West</option>
+                            <option value="South">South</option>
+                            <option value="Central">Central</option>
+                            <option value="East">East</option>
+                        </select>
+
+                        <select id="filter_by_year">
+                            <option value="all">Year :</option>
+                            <option value=2014>2014</option>
+                            <option value=2015>2015</option>
+                            <option value=2016>2016</option>
+                            <option value=2017>2017</option>
+                        </select>
+
+                        <!--<select id="dateRange" name="dateRange">
+                            <option value="Pilih Rentang Tanggal">Pilih Rentang Tanggal :</option>
+                        </select>-->
+                        <table class="table-short">
+                            <thead>
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>City</th>
+                                    <th>Quantity</th>
+
+                                </tr>
+                            </thead>
+                            <tbody id="tabel1">
+                                <!--dari js-->
+                            </tbody>
+                        </table>
+                    </form>
+                    <script src="assets/js/script.js"></script>
+                </div>
+            </div>
+
+            <div data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000">
+                <div class="boxCardAnal">
+                    <div class="cardAnal">
+                        <div>
+                            <div class="cardName">Avg Basket Size</div>
+                            <div class="numbers">7</div>
+                        </div>
+                    </div>
+
+                    <div class="cardAnal">
+                        <div>
+                            <div class="cardName">Discount</div>
+                            <div class="numbers" id="diskon">16%</div>
+                        </div>
+                    </div>
+
+                    <div class="cardAnal">
+                        <div>
+                            <div class="cardName">Avg Shipping Time</div>
+                            <div class="numbers">4</div>
+                        </div>
+                    </div>
+
+                    <div class="cardAnal">
+                        <div>
+                            <div class="cardName">Quantity</div>
+                            <div class="numbers">37.356</div>
+                        </div>
+                    </div>
+
+                    <div class="cardAnal">
+                        <div>
+                            <div class="cardName">Profit</div>
+                            <div class="numbers" id="profit">4.7 B</div>
+                        </div>
+                    </div>
+
+                    <div class="cardAnal">
+                        <div>
+                            <div class="cardName">Sales</div>
+                            <div class="numbers" id="sales">676 M</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container2" data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000">
+                <div class="chart-cont">
+                    <canvas id="linechart1"></canvas>
+                    <script src="assets/js/SumProfitYear.js"></script>
+                </div>
+                <div class="chart-cont">
+                    <canvas id="linechart2"></canvas>
+                    <script src="assets/js/SumSalesByMonth.js"></script>
+                </div>
+            </div>
+            <div data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000"><p class="tb2">Top 4 Sales by Category by Region</p></div>
+            <div class="container3" data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000">
+                <div class="chart-cont2">
+                    <canvas id="piechart" ></canvas>
+                    <script src="assets/js/SumProfitCategory.js"></script>
+                </div>
+                
+                <table class="table-analytic" id="filtertb_by_region">
+                    <thead>
+                        <tr>
+                            <th>Region</th>
+                            <th>Furniture</th>
+                            <th>Technology</th>
+                            <th>Office Supplice</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelsalescategory">
+                        <!--isinya js-->
+                    </tbody>
+                </table>
+                <script src="assets/js/tabel2.js"></script>
+
+            </div>
+            <div class="container4" data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000">
+                <div class="chart-cont3">
+                    <canvas id="barchart1"></canvas>
+                    <script src="assets/js/AvgDiscountPerCity.js"></script>
+                </div>
+                <div class="chart-cont3">
+                    <canvas id="barchart2"></canvas>
+                    <script src="assets/js/SumProfitRegion.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="assets/js/main.js"></script>
+
+
+    <!-- ====== ionicons buat icon ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
